@@ -5,11 +5,7 @@ public class MailChecker {
     private final int checkPeriodSeconds;
 
     public MailChecker(int checkPeriodSeconds) {
-        this(checkPeriodSeconds, new MailReceiver());
-    }
-
-    public MailChecker(int checkPeriodSeconds, MailReceiver receiver) {
-        this.receiver = receiver;
+        this.receiver = new MailReceiver();
         this.checkPeriodSeconds = checkPeriodSeconds;
     }
 
